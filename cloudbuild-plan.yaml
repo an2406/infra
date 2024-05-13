@@ -1,0 +1,9 @@
+steps:
+  - name: 'docker.io/hashicorp/terraform:1.6'
+    args: ['init']
+    dir: terraform/
+  - name: 'docker.io/hashicorp/terraform:1.6'
+    args: ['plan', '-var-file=env.tfvars']
+    dir: terraform/
+
+logsBucket: 'gs://elegant-pipe-423001-f8-cb-logs'
